@@ -1,16 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\sunamo\sunamo.csproj">
-    </ProjectReference>
-    <ProjectReference Include="..\win.std\win.std.csproj" />
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SunamoFileIO" Version="24.1.1.2" />
+    <PackageReference Include="SunamoPlatformUwpInterop" Version="24.1.1.1" />
+    <PackageReference Include="SunamoStringJoin" Version="24.1.1.1" />
+    <PackageReference Include="TextCopy" Version="6.2.1" />
+  </ItemGroup>
 </Project>

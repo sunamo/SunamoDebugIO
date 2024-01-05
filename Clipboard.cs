@@ -1,3 +1,6 @@
+namespace SunamoDebugIO;
+
+
 public partial class ProgramShared
 {
     public static string ClipboardS
@@ -14,7 +17,7 @@ public partial class ProgramShared
         {
             if (Clipboard != null)
             {
-                return SH.GetLines(Clipboard.ToString());
+                return SHGetLines.GetLines(Clipboard.ToString());
             }
             return new List<string>();
         }
@@ -31,7 +34,7 @@ public partial class ProgramShared
     {
         set
         {
-            Clipboard = SH.JoinNL(value);
+            Clipboard = SHJoin.JoinNL(value);
         }
     }
 
@@ -42,7 +45,7 @@ public partial class ProgramShared
     {
         set
         {
-            Clipboard = SH.JoinNL(CA.ToListString2( value));
+            Clipboard = SHJoin.JoinNL( value.ConvertAll(d => d.ToString()));
         }
     }
 

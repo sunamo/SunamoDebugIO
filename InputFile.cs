@@ -1,3 +1,5 @@
+namespace SunamoDebugIO;
+
 public partial class ProgramShared
 {
 

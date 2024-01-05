@@ -1,3 +1,7 @@
+using SunamoDebugIO._sunamo;
+
+namespace SunamoDebugIO;
+
 public partial class ProgramShared
 {
     #region Toto musím implementovat do každé třídy - protože jsou static, tím že je zdědím ničeho nedosáhnu. Tím pádem je ani dědit nemusím a musím je impl. jako předávající vlastnosti.

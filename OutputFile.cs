@@ -1,11 +1,14 @@
+namespace SunamoDebugIO;
+
+
 public partial class ProgramShared
 {
     public static string NotExistsFiles
     {
         set
         {
-            TF.WriteAllText(notExistsFile, value);
-            ThisApp.SetStatus(TypeOfMessage.Success, "Output was written to " + notExistsFile);
+            File.WriteAllText(notExistsFile, value);
+            ThisApp.Success( "Output was written to " + notExistsFile);
         }
     }
 
@@ -13,8 +16,8 @@ public partial class ProgramShared
     {
         set
         {
-            TF.WriteAllText(outputFile, value);
-            ThisApp.SetStatus(TypeOfMessage.Success, "Output was written to " + outputFile);
+            File.WriteAllText(outputFile, value);
+            ThisApp.Success( "Output was written to " + outputFile);
         }
     }
 
@@ -22,8 +25,8 @@ public partial class ProgramShared
     {
         set
         {
-            TF.WriteAllText(outputJsonFile, value);
-            ThisApp.SetStatus(TypeOfMessage.Success, "Output was written to " + outputJsonFile);
+            File.WriteAllText(outputJsonFile, value);
+            ThisApp.Success( "Output was written to " + outputJsonFile);
         }
     }
 
@@ -31,8 +34,8 @@ public partial class ProgramShared
     {
         set
         {
-            TF.WriteAllLines(outputFile, value);
-            ThisApp.SetStatus(TypeOfMessage.Success, "Output was written to " + outputFile);
+            File.WriteAllLines(outputFile, value);
+            ThisApp.Success( "Output was written to " + outputFile);
         }
     }
 
@@ -42,8 +45,8 @@ public partial class ProgramShared
     {
         set
         {
-            TF.WriteAllText(output2File, value);
-            ThisApp.SetStatus(TypeOfMessage.Success, "Output was written to " + output2File);
+             File.WriteAllText(output2File, value);
+            ThisApp.Success( "Output was written to " + output2File);
         }
     }
 
@@ -51,8 +54,8 @@ public partial class ProgramShared
     {
         set
         {
-            TF.WriteAllLines(output2File, value);
-            ThisApp.SetStatus(TypeOfMessage.Success, "Output was written to " + output2File);
+             File.WriteAllLines(output2File, value);
+            ThisApp.Success( "Output was written to " + output2File);
         }
     }
 
