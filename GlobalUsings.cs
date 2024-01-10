@@ -1,0 +1,17 @@
+﻿//global using sunamo.Essential;
+//global using SunamoExceptions;
+global using System.Collections.Generic;
+global using System.Collections;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using System;
+global using SunamoFileIO;
+global using SunamoStringJoin;
+global using System.IO;
+global using SunamoDebugIO._sunamo;
+global using SunamoShared;
+global using SunamoStringGetLines;
+global using SunamoThisApp;
+global using TextCopy;
+global using SunamoWinStd;
