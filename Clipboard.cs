@@ -1,13 +1,36 @@
+﻿using SunamoString;
+
 namespace SunamoDebugIO;
 
 
 public partial class ProgramShared
 {
-    public static string ClipboardS
+    #region MyRegion
+    //public static string ClipboardS
+    //{
+    //    get
+    //    {
+    //        return Clipboard.ToString();
+    //    }
+    //}
+
+    public static IList<int> ClipboardIInt
     {
-        get
+        set
         {
-            return Clipboard.ToString();
+            Clipboard = null; //SHJoin.JoinNL(value.ConvertAll(d => d.ToString()));
+        }
+    }
+    #endregion
+
+    /// <summary>
+    /// Může být na Object ale ne default (tedy s příponou O) a velkým O
+    /// </summary>
+    public static Object ClipboardO
+    {
+        set
+        {
+            Clipboard = value.ToString();
         }
     }
 
@@ -23,25 +46,25 @@ public partial class ProgramShared
         }
         set
         {
-            ClipboardI = value;
+            Clipboard = SH.JoinNL(value);
         }
     }
+
+    ///// <summary>
+    ///// I like IList
+    ///// </summary>
+    //public static IList<string> ClipboardI
+    //{
+    //    set
+    //    {
+    //        Clipboard = SHJoin.JoinNL(value);
+    //    }
+    //}
 
     /// <summary>
     /// I like IList
     /// </summary>
-    public static List<string> ClipboardI
-    {
-        set
-        {
-            Clipboard = SHJoin.JoinNL(value);
-        }
-    }
-
-    /// <summary>
-    /// I like IList
-    /// </summary>
-    public static List<int> ClipboardIInt
+    public static List<int> ClipboardLInt
     {
         set
         {
@@ -61,6 +84,17 @@ public partial class ProgramShared
         set
         {
             ClipboardService.SetText(value);
+        }
+    }
+
+    /// <summary>
+    /// Protože je cool dát = tog a nepsat všude ToString()
+    /// </summary>
+    public static Object CLipboardO
+    {
+        set
+        {
+            Clipboard = value.ToString();
         }
     }
 }
