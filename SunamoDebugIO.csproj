@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Version>24.1.14.2</Version>
+    <Version>24.1.24.1</Version>
     <Description>Read input and write output to prenamed files in every app on sunamo's platform</Description>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -11,11 +11,7 @@
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SunamoFileIO" Version="24.1.12.3" />
-    <PackageReference Include="SunamoPlatformUwpInterop" Version="24.1.10.1" />
-    <PackageReference Include="SunamoStringJoin" Version="24.1.10.1" />
-    <PackageReference Include="SunamoValues" Version="24.1.10.1" />
-    <PackageReference Include="SunamoWinStd" Version="24.1.14.1" />
-    <PackageReference Include="TextCopy" Version="6.2.1" />
+    <PackageReference Include="SunamoStringJoin" Version="24.1.14.1" />
+    <PackageReference Include="SunamoWinStd" Version="24.1.14.2" />
   </ItemGroup>
 </Project>
