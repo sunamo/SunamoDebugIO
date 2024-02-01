@@ -1,4 +1,7 @@
+
 namespace SunamoDebugIO;
+using System.Linq;
+
 
 public partial class ProgramShared
 {
@@ -17,7 +20,7 @@ public partial class ProgramShared
 #if ASYNC
     await
 #endif
- TF.ReadAllText(inputFile);
+ File.ReadAllTextAsync(inputFile);
 
     }
 
@@ -30,11 +33,11 @@ public partial class ProgramShared
  InputL()
     {
 
-        return
+        return (
 #if ASYNC
 await
 #endif
-TF.ReadAllLines(inputFile);
+File.ReadAllLinesAsync(inputFile)).ToList();
 
     }
 
@@ -47,11 +50,12 @@ TF.ReadAllLines(inputFile);
     InputJson()
     {
 
-        return
+        return (
 #if ASYNC
 await
 #endif
-TF.ReadAllText(inputFileJson);
+File.ReadAllTextAsync(inputFileJson));
 
     }
 }
+

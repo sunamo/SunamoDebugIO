@@ -1,15 +1,17 @@
-﻿namespace SunamoDebugIO._sunamo;
-public class FS
-{
-    //public static Action<string> CreateFileIfDoesntExists;
 
-    public static async Task CreateFileIfDoesntExists(String path)
-    {
-        await File.AppendAllTextAsync(path, string.Empty);
+namespace SunamoDebugIO._sunamo;
+//namespace SunamoDebugIO._sunamo;
+//internal class FS
+//{
+//    //internal static Action<string> CreateFileIfDoesntExists;
 
-        //foreach (var item in path)
-        //{
-        //    await File.AppendAllTextAsync(item, string.Empty);
-        //}
-    }
-}
+//    internal static async Task CreateFileIfDoesntExists(String path)
+//    {
+//        await File.AppendAllTextAsync(path, string.Empty);
+
+//        //foreach (var item in path)
+//        //{
+//        //    await File.AppendAllTextAsync(item, string.Empty);
+//        //}
+//    }
+//}

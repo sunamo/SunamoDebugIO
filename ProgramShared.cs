@@ -1,4 +1,7 @@
+
 namespace SunamoDebugIO;
+using SunamoValues;
+
 
 public partial class ProgramShared
 {
@@ -33,14 +36,24 @@ public partial class ProgramShared
         input3File = getFile(AppFoldersStrings.Input, "input3.txt");
         inputHtmlFile = getFile(AppFoldersStrings.Input, "inputHtml.txt");
 
-        await FS.CreateFileIfDoesntExists(outputFile);
-        await FS.CreateFileIfDoesntExists(outputJsonFile);
-        await FS.CreateFileIfDoesntExists(output2File);
-        await FS.CreateFileIfDoesntExists(notExistsFile);
-        await FS.CreateFileIfDoesntExists(inputFile);
-        await FS.CreateFileIfDoesntExists(input2File);
-        await FS.CreateFileIfDoesntExists(input3File);
-        await FS.CreateFileIfDoesntExists(inputHtmlFile);
+        await CreateFileIfDoesntExists(outputFile);
+        await CreateFileIfDoesntExists(outputJsonFile);
+        await CreateFileIfDoesntExists(output2File);
+        await CreateFileIfDoesntExists(notExistsFile);
+        await CreateFileIfDoesntExists(inputFile);
+        await CreateFileIfDoesntExists(input2File);
+        await CreateFileIfDoesntExists(input3File);
+        await CreateFileIfDoesntExists(inputHtmlFile);
 
+    }
+
+    static async Task CreateFileIfDoesntExists(String path)
+    {
+        await File.AppendAllTextAsync(path, string.Empty);
+
+        //foreach (var item in path)
+        //{
+        //    await File.AppendAllTextAsync(item, string.Empty);
+        //}
     }
 }

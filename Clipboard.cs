@@ -1,4 +1,8 @@
+
 namespace SunamoDebugIO;
+using SunamoStringGetLines;
+using TextCopy;
+
 
 
 public partial class ProgramShared
@@ -16,7 +20,7 @@ public partial class ProgramShared
     {
         set
         {
-            Clipboard = null; //SHJoin.JoinNL(value.ConvertAll(d => d.ToString()));
+            Clipboard = null; //string.Join(Environment.NewLine, value.ConvertAll(d => d.ToString()));
         }
     }
     #endregion
@@ -44,7 +48,7 @@ public partial class ProgramShared
         }
         set
         {
-            Clipboard = SH.JoinNL(value);
+            Clipboard = string.Join(Environment.NewLine, value);
         }
     }
 
@@ -55,7 +59,7 @@ public partial class ProgramShared
     //{
     //    set
     //    {
-    //        Clipboard = SHJoin.JoinNL(value);
+    //        Clipboard = string.Join(Environment.NewLine, value);
     //    }
     //}
 
@@ -66,7 +70,7 @@ public partial class ProgramShared
     {
         set
         {
-            Clipboard = SHJoin.JoinNL(value.ConvertAll(d => d.ToString()));
+            Clipboard = string.Join(Environment.NewLine, value.ConvertAll(d => d.ToString()));
         }
     }
 
