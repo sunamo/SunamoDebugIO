@@ -22,6 +22,8 @@ public partial class ProgramShared
     /// <summary>
     /// 3) Initialize base properties of every app
     /// In console put into InitNotUt / Init (Initilize.cs file)
+    /// 
+    /// Into A1 put AppData.ci.GetFileString from SunamoThisApp
     /// </summary>
     /// <param name="getFile"></param>
     public static async Task CreatePathToFiles(Func<string, string, string> getFile)

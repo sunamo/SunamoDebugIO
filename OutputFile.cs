@@ -1,8 +1,7 @@
 
 namespace SunamoDebugIO;
 using SunamoWinStd;
-
-
+using System;
 
 public partial class ProgramShared
 {
@@ -10,7 +9,7 @@ public partial class ProgramShared
     {
         set
         {
-            File.WriteAllText(notExistsFile, value);
+            WriteAllText(notExistsFile, value);
             //ThisApp.Success("Output was written to " + notExistsFile);
         }
     }
@@ -19,7 +18,7 @@ public partial class ProgramShared
     {
         set
         {
-            File.WriteAllText(outputFile, value);
+            WriteAllText(outputFile, value);
             //ThisApp.Success("Output was written to " + outputFile);
         }
     }
@@ -28,7 +27,7 @@ public partial class ProgramShared
     {
         set
         {
-            File.WriteAllText(outputJsonFile, value);
+            WriteAllText(outputJsonFile, value);
             //ThisApp.Success("Output was written to " + outputJsonFile);
         }
     }
@@ -37,7 +36,7 @@ public partial class ProgramShared
     {
         set
         {
-            File.WriteAllLines(outputFile, value);
+            WriteAllLines(outputFile, value);
             //ThisApp.Success("Output was written to " + outputFile);
         }
     }
@@ -48,8 +47,16 @@ public partial class ProgramShared
     {
         set
         {
-            File.WriteAllText(output2File, value);
+            WriteAllText(output2File, value);
             //ThisApp.Success("Output was written to " + output2File);
+        }
+    }
+
+    private static void WriteAllText(string output2File, string value)
+    {
+        if (output2File == null)
+        {
+            throw new Exception("Firstly you have to call ProgramShared.CreatePathToFiles");
         }
     }
 
@@ -57,7 +64,7 @@ public partial class ProgramShared
     {
         set
         {
-            File.WriteAllLines(output2File, value);
+            WriteAllLines(output2File, value);
             //ThisApp.Success("Output was written to " + output2File);
         }
     }
