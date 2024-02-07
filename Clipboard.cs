@@ -1,6 +1,7 @@
 
 namespace SunamoDebugIO;
-using SunamoStringGetLines;
+
+using System.Linq;
 using TextCopy;
 
 
@@ -42,7 +43,8 @@ public partial class ProgramShared
         {
             if (Clipboard != null)
             {
-                return SHGetLines.GetLines(Clipboard.ToString());
+                return Clipboard.ToString().Split(new String[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                //return SHGetLines.GetLines(Clipboard.ToString());
             }
             return new List<string>();
         }

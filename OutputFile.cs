@@ -1,6 +1,8 @@
 
 namespace SunamoDebugIO;
-using SunamoWinStd;
+
+using SunamoDebugIO._public;
+
 using System;
 
 public partial class ProgramShared
@@ -58,6 +60,18 @@ public partial class ProgramShared
         {
             throw new Exception("Firstly you have to call ProgramShared.CreatePathToFiles");
         }
+
+        File.WriteAllText(output2File, value);
+    }
+
+    private static void WriteAllLines(string output2File, List<string> value)
+    {
+        if (output2File == null)
+        {
+            throw new Exception("Firstly you have to call ProgramShared.CreatePathToFiles");
+        }
+
+        File.WriteAllLines(output2File, value);
     }
 
     public static List<string> OutputL2
@@ -69,23 +83,41 @@ public partial class ProgramShared
         }
     }
 
-    public static void Output2Open()
+
+
+    public static async void Output2Open()
     {
-        PHWin.Codium(output2File);
+        WarningIfIsNull();
+
+        PHWinDebugIO.Codium(output2File).GetAwaiter().GetResult();
     }
 
     public static void OutputOpen()
     {
-        PHWin.Codium(outputFile);
+        WarningIfIsNull();
+
+        PHWinDebugIO.Codium(outputFile).GetAwaiter().GetResult();
     }
 
     public static void OutputJsonOpen()
     {
-        PHWin.Codium(outputJsonFile);
+        WarningIfIsNull();
+
+        PHWinDebugIO.Codium(outputJsonFile).GetAwaiter().GetResult();
     }
 
     public static void InputOpen()
     {
-        PHWin.Codium(inputFile);
+        WarningIfIsNull();
+
+        PHWinDebugIO.Codium(inputFile).GetAwaiter().GetResult();
+    }
+
+    private static void WarningIfIsNull()
+    {
+        if (PHWinDebugIO.Codium == null)
+        {
+            throw new Exception("Please set up PHWinDebugIO.Codium");
+        }
     }
 }
