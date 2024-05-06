@@ -5,10 +5,10 @@
     <Description>Read input and write output to prenamed files in every app on sunamo's platform</Description>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoDebugIO</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoDebugIO</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="TextCopy" Version="6.2.1" />
