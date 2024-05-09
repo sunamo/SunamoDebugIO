@@ -43,7 +43,7 @@ public partial class ProgramShared
         {
             if (Clipboard != null)
             {
-                return Clipboard.ToString().Split(new String[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                return Clipboard.ToString()v.Split(new string[] { v.Contains("\r\n") ? "\r\n" : "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
                 //return SHGetLines.GetLines(Clipboard.ToString());
             }
             return new List<string>();
