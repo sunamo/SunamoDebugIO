@@ -1,5 +1,5 @@
 
-namespace SunamoDebugIO._sunamo;
+namespace SunamoDebugIO;
 //namespace SunamoDebugIO._sunamo;
 //internal class FS
 //{
