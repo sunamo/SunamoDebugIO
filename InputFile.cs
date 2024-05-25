@@ -33,7 +33,7 @@ public partial class ProgramShared
  InputL()
     {
 
-        return (
+        return SHGetLines.GetLines(
 #if ASYNC
 await
 #endif
