@@ -37,7 +37,7 @@ public partial class ProgramShared
 #if ASYNC
 await
 #endif
-File.ReadAllLinesAsync(inputFile)).ToList();
+File.ReadAllTextAsync(inputFile)).ToList();
 
     }
 
