@@ -1,3 +1,5 @@
+
+namespace SunamoDebugIO;
 using System.Diagnostics;
 using System.Text;
 

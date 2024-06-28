@@ -1,3 +1,5 @@
+
+namespace SunamoDebugIO;
 internal class SHSunamoExceptions
 {
     public static string JoinNL(List<string> l)
