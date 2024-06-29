@@ -28,15 +28,15 @@ public partial class ProgramShared
     /// <param name="getFile"></param>
     public static async Task CreatePathToFiles(Func<string, string, string> getFile)
     {
-        outputFile = getFile(AppFoldersStrings.Output, "output.txt");
-        outputJsonFile = getFile(AppFoldersStrings.Output, "output.json");
-        output2File = getFile(AppFoldersStrings.Output, "output2.txt");
-        notExistsFile = getFile(AppFoldersStrings.Output, "notExistsFile.txt");
-        inputFile = getFile(AppFoldersStrings.Input, "input.txt");
-        inputFileJson = getFile(AppFoldersStrings.Input, "input.json");
-        input2File = getFile(AppFoldersStrings.Input, "input2.txt");
-        input3File = getFile(AppFoldersStrings.Input, "input3.txt");
-        inputHtmlFile = getFile(AppFoldersStrings.Input, "inputHtml.txt");
+        outputFile = getFile(AppStringsFolders.Output, "output.txt");
+        outputJsonFile = getFile(AppStringsFolders.Output, "output.json");
+        output2File = getFile(AppStringsFolders.Output, "output2.txt");
+        notExistsFile = getFile(AppStringsFolders.Output, "notExistsFile.txt");
+        inputFile = getFile(AppStringsFolders.Input, "input.txt");
+        inputFileJson = getFile(AppStringsFolders.Input, "input.json");
+        input2File = getFile(AppStringsFolders.Input, "input2.txt");
+        input3File = getFile(AppStringsFolders.Input, "input3.txt");
+        inputHtmlFile = getFile(AppStringsFolders.Input, "inputHtml.txt");
 
         await CreateFileIfDoesntExists(outputFile);
         await CreateFileIfDoesntExists(outputJsonFile);
