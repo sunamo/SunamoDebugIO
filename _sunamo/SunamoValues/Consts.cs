@@ -1,4 +1,4 @@
-namespace SunamoDebugIO;
+namespace SunamoDebugIO._sunamo.SunamoValues;
 
 
 

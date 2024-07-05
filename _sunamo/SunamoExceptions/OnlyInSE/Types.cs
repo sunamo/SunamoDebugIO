@@ -1,4 +1,4 @@
-namespace SunamoDebugIO;
+namespace SunamoDebugIO._sunamo.SunamoExceptions.OnlyInSE;
 
 using System.Collections;
 using System.Text;
