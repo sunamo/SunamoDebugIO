@@ -15,3 +15,6 @@ global using SunamoDebugIO._sunamo.SunamoValues;
 global using SunamoDebugIO._sunamo.SunamoXlfKeys;
 global using SunamoDebugIO._sunamo.SunamoExceptions.OnlyInSE;
 global using SunamoDebugIO._sunamo.SunamoExceptions._AddedToAllCsproj;
+global using System.Diagnostics;
+global using System.Net;
+global using TextCopy;
