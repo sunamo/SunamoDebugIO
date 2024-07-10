@@ -5,7 +5,7 @@ namespace SunamoDebugIO;
 public partial class ProgramShared
 {
     #region Toto musím implementovat do každé třídy - protože jsou static, tím že je zdědím ničeho nedosáhnu. Tím pádem je ani dědit nemusím a musím je impl. jako předávající vlastnosti.
-    static string plainTxt = @"E:\vs\Projects\sunamoWithoutLocalDep\sunamo\plain.txt";
+    static string plainTxt = @"E:\vs\Projects\PlatformIndependentNuGetPackages\sunamo\plain.txt";
     public static Type type = typeof(ProgramShared);
     public static string outputFile = null;
     public static string outputJsonFile = null;
