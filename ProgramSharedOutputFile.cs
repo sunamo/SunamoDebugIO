@@ -1,3 +1,5 @@
+using SunamoDebugIO._sunamo;
+
 namespace SunamoDebugIO;
 
 
@@ -87,35 +89,35 @@ public partial class ProgramShared
     {
         WarningIfIsNull();
 
-        PHWinDebugIO.Codium(output2File).GetAwaiter().GetResult();
+        PH.Codium(output2File);
     }
 
     public static void OutputOpen()
     {
         WarningIfIsNull();
 
-        PHWinDebugIO.Codium(outputFile).GetAwaiter().GetResult();
+        PH.Codium(outputFile);
     }
 
     public static void OutputJsonOpen()
     {
         WarningIfIsNull();
 
-        PHWinDebugIO.Codium(outputJsonFile).GetAwaiter().GetResult();
+        PH.Codium(outputJsonFile);
     }
 
     public static void InputOpen()
     {
         WarningIfIsNull();
 
-        PHWinDebugIO.Codium(inputFile).GetAwaiter().GetResult();
+        PH.Codium(inputFile);
     }
 
     private static void WarningIfIsNull()
     {
-        if (PHWinDebugIO.Codium == null)
+        if (PH.Codium == null)
         {
-            throw new Exception("Please set up PHWinDebugIO.Codium");
+            throw new Exception("Please set up PH.Codium");
         }
     }
 }

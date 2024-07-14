@@ -35,7 +35,7 @@ public partial class ProgramShared
         inputFileJson = getFile(AppStringsFolders.Input, "input.json");
         input2File = getFile(AppStringsFolders.Input, "input2.txt");
         input3File = getFile(AppStringsFolders.Input, "input3.txt");
-        inputHtmlFile = getFile(AppStringsFolders.Input, "inputHtml.txt");
+        inputHtmlFile = getFile(AppStringsFolders.Input, "inputHtml.html");
 
         await CreateFileIfDoesntExists(outputFile);
         await CreateFileIfDoesntExists(outputJsonFile);
