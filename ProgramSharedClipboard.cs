@@ -1,8 +1,5 @@
 namespace SunamoDebugIO;
 
-
-
-
 public partial class ProgramShared
 {
     #region MyRegion
