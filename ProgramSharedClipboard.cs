@@ -1,5 +1,5 @@
-namespace SunamoDebugIO;
 
+namespace SunamoDebugIO;
 public partial class ProgramShared
 {
     #region MyRegion
@@ -78,11 +78,11 @@ public partial class ProgramShared
     {
         get
         {
-            return ClipboardService.GetText();
+            return ClipboardHelper.GetText();
         }
         set
         {
-            ClipboardService.SetText(value);
+            ClipboardHelper.SetText(value);
         }
     }
 
