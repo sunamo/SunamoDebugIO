@@ -78,11 +78,11 @@ public partial class ProgramShared
     {
         get
         {
-            return ClipboardHelper.GetText();
+            return ClipboardService.GetText();
         }
         set
         {
-            ClipboardHelper.SetText(value);
+            ClipboardService.SetText(value);
         }
     }
 
