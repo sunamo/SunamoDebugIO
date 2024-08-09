@@ -14,4 +14,3 @@ global using System.Net;
 global using TextCopy;
 global using SunamoDebugIO;
 global using SunamoDebugIO._sunamo;
-global using SunamoDebugIO._sunamo.SunamoXlfKeys;

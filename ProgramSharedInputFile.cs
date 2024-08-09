@@ -1,6 +1,5 @@
 namespace SunamoDebugIO;
 
-
 public partial class ProgramShared
 {
     public static async Task<string> InputHtml()
@@ -10,52 +9,42 @@ public partial class ProgramShared
 
     public static
 #if ASYNC
-    async Task<string>
+        async Task<string>
 #else
     string
 #endif
-    Input()
+        Input()
     {
-
         return
 #if ASYNC
-    await
+            await
 #endif
-    File.ReadAllTextAsync(inputFile);
-
+                File.ReadAllTextAsync(inputFile);
     }
 
     public static
 #if ASYNC
-    async Task<List<string>>
+        async Task<List<string>>
 #else
     List<string>
 #endif
-    InputL()
+        InputL()
     {
-
         return SHGetLines.GetLines(
 #if ASYNC
-    await
+            await
 #endif
-    File.ReadAllTextAsync(inputFile)).ToList();
-
+                File.ReadAllTextAsync(inputFile)).ToList();
     }
 
     public static
 #if ASYNC
-    async Task<string>
+        async Task<string>
 #else
     string
 #endif
-    InputJson()
+        InputJson()
     {
-
-        return (
-#if ASYNC
-    await
-#endif
-    File.ReadAllTextAsync(inputFileJson));
-
+        return await File.ReadAllTextAsync(inputFileJson);
     }
 }
