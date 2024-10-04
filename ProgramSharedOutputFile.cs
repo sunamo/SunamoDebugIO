@@ -75,11 +75,18 @@ public partial class ProgramShared
         PH.Codium(outputJsonFile);
     }
 
-    public static void InputOpen()
+    public static void InputOpen(bool waitForConfirmationOfDataEntered = true)
     {
         WarningIfIsNull();
 
         PH.Codium(inputFile);
+
+        if (waitForConfirmationOfDataEntered)
+        {
+            Console.WriteLine("Input file was opened, press enter after fill it");
+            Console.ReadLine();
+        }
+
     }
 
     private static void WarningIfIsNull()
