@@ -1,4 +1,3 @@
-
 namespace SunamoDebugIO._sunamo;
 using System.Threading;
 
