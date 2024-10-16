@@ -30,11 +30,7 @@ public partial class ProgramShared
 #endif
         InputL()
     {
-        return SHGetLines.GetLines(
-#if ASYNC
-            await
-#endif
-                File.ReadAllTextAsync(inputFile)).ToList();
+        return (await File.ReadAllLinesAsync(inputFile)).ToList();
     }
 
     public static

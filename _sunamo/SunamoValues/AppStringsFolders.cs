@@ -1,6 +1,4 @@
 namespace SunamoDebugIO._sunamo.SunamoValues;
-
-
 internal class AppStringsFolders
 {
     #region Not backuped
