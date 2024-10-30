@@ -14,6 +14,22 @@ public partial class ProgramShared
         //ThisApp.Success("Output was written to " + outputFile);
     }
 
+    public static List<StringBuilder> OutputStringBuilders
+    {
+        set
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in value)
+            {
+                sb.AppendLine(item.ToString());
+                sb.AppendLine();
+                sb.AppendLine();
+            }
+
+            WriteAllText(outputFile, sb.ToString());
+        }
+    }
+
     public static string OutputJson
     {
         set => WriteAllText(outputJsonFile, value);
