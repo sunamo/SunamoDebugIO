@@ -42,7 +42,7 @@ public partial class ProgramShared
 
     #region Toto musím implementovat do každé třídy - protože jsou static, tím že je zdědím ničeho nedosáhnu. Tím pádem je ani dědit nemusím a musím je impl. jako předávající vlastnosti.
 
-    private static string plainTxt = @"E:\vs\Projects\PlatformIndependentNuGetPackages\sunamo\plain.txt";
+
     public static Type type = typeof(ProgramShared);
     public static string outputFile;
     public static string outputJsonFile;
