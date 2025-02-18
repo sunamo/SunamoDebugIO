@@ -66,10 +66,10 @@ public partial class ProgramShared
     /// <summary>
     ///     If value is Enumerable, join with comma
     /// </summary>
-    public static string Clipboard
+    public static string? Clipboard
     {
         get => ClipboardService.GetText();
-        set => ClipboardService.SetText(value);
+        set => ClipboardService.SetText(value ?? "");
     }
 
     /// <summary>

@@ -44,15 +44,15 @@ public partial class ProgramShared
 
 
     public static Type type = typeof(ProgramShared);
-    public static string outputFile;
-    public static string outputJsonFile;
-    public static string output2File;
-    public static string notExistsFile;
-    public static string inputFile;
-    public static string inputFileJson;
-    public static string input2File;
-    public static string input3File;
-    public static string inputHtmlFile;
+    public static string outputFile = "";
+    public static string outputJsonFile = "";
+    public static string output2File = "";
+    public static string notExistsFile = "";
+    public static string inputFile = "";
+    public static string inputFileJson = "";
+    public static string input2File = "";
+    public static string input3File = "";
+    public static string inputHtmlFile = "";
 
     #endregion
 }
