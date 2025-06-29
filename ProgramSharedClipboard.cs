@@ -12,9 +12,9 @@ public partial class ProgramShared
     //    }
     //}
 
-    public static IList<int> ClipboardIInt
+    public static List<int> ClipboardIInt
     {
-        set => Clipboard = null; //string.Join(Environment.NewLine, value.ConvertAll(d => d.ToString()));
+        set => Clipboard = string.Join(Environment.NewLine, value.ConvertAll(d => d.ToString()));
     }
 
     #endregion
@@ -72,11 +72,5 @@ public partial class ProgramShared
         set => ClipboardService.SetText(value ?? "");
     }
 
-    /// <summary>
-    ///     Protože je cool dát = tog a nepsat všude ToString()
-    /// </summary>
-    public static object CLipboardO
-    {
-        set => Clipboard = value.ToString();
-    }
+
 }
