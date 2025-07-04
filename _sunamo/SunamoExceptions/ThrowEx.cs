@@ -26,8 +26,12 @@ internal partial class ThrowEx
 
             methodName = Exceptions.CallingMethod(depth);
         }
-        string typeFullName;
-        if (type is Type type2)
+        string typeFullName = "";
+        if (type == null)
+        {
+
+        }
+        else if (type is Type type2)
         {
             typeFullName = type2.FullName ?? "Type cannot be get via type is Type type2";
         }

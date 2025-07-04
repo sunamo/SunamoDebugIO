@@ -12,6 +12,7 @@ public partial class ProgramShared
     {
         outputFile = getFile(AppStringsFolders.Output, "output.txt");
         outputJsonFile = getFile(AppStringsFolders.Output, "output.json");
+        outputHtmlFile = getFile(AppStringsFolders.Output, "output.html");
         output2File = getFile(AppStringsFolders.Output, "output2.txt");
         notExistsFile = getFile(AppStringsFolders.Output, "notExistsFile.txt");
         inputFile = getFile(AppStringsFolders.Input, "input.txt");
@@ -22,6 +23,7 @@ public partial class ProgramShared
 
         await CreateFileIfDoesntExists(outputFile);
         await CreateFileIfDoesntExists(outputJsonFile);
+        await CreateFileIfDoesntExists(outputHtmlFile);
         await CreateFileIfDoesntExists(output2File);
         await CreateFileIfDoesntExists(notExistsFile);
         await CreateFileIfDoesntExists(inputFile);
@@ -46,6 +48,7 @@ public partial class ProgramShared
     public static Type type = typeof(ProgramShared);
     public static string outputFile = "";
     public static string outputJsonFile = "";
+    public static string outputHtmlFile = "";
     public static string output2File = "";
     public static string notExistsFile = "";
     public static string inputFile = "";

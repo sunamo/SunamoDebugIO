@@ -36,6 +36,12 @@ public partial class ProgramShared
         //ThisApp.Success("Output was written to " + outputJsonFile);
     }
 
+    public static string OutputHtml
+    {
+        set => WriteAllText(outputJsonFile, value);
+        //ThisApp.Success("Output was written to " + outputJsonFile);
+    }
+
     public static List<string> OutputL
     {
         set => WriteAllLines(outputFile, value);
@@ -89,6 +95,13 @@ public partial class ProgramShared
         WarningIfIsNull();
 
         PH.Codium(outputJsonFile);
+    }
+
+    public static void OutputHtmlOpen()
+    {
+        WarningIfIsNull();
+
+        PH.Codium(outputHtmlFile);
     }
 
     public static void InputOpen(bool waitForConfirmationOfDataEntered = true)
