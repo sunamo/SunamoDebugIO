@@ -1,3 +1,6 @@
+// EN: Variable names have been checked and replaced with self-descriptive names
+// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
+
 namespace SunamoDebugIO;
 
 public partial class ProgramShared
@@ -33,8 +36,8 @@ public partial class ProgramShared
         {
             if (Clipboard != null)
             {
-                var v = Clipboard;
-                return v.Split(new[] { v.Contains("\r\n") ? "\r\n" : "\n" }, StringSplitOptions.RemoveEmptyEntries)
+                var value = Clipboard;
+                return value.Split(new[] { value.Contains("\r\n") ? "\r\n" : "\n" }, StringSplitOptions.RemoveEmptyEntries)
                     .ToList();
                 //return SHGetLines.GetLines(Clipboard.ToString());
             }

@@ -1,3 +1,6 @@
+// EN: Variable names have been checked and replaced with self-descriptive names
+// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
+
 namespace SunamoDebugIO;
 
 public partial class ProgramShared
@@ -18,15 +21,15 @@ public partial class ProgramShared
     {
         set
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder stringBuilder = new StringBuilder();
             foreach (var item in value)
             {
-                sb.AppendLine(item.ToString());
-                sb.AppendLine();
-                sb.AppendLine();
+                stringBuilder.AppendLine(item.ToString());
+                stringBuilder.AppendLine();
+                stringBuilder.AppendLine();
             }
 
-            WriteAllText(outputFile, sb.ToString());
+            WriteAllText(outputFile, stringBuilder.ToString());
         }
     }
 
