@@ -1,6 +1,7 @@
+namespace SunamoDebugIO._sunamo.SunamoValues;
+
 // EN: Variable names have been checked and replaced with self-descriptive names
 // CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
-namespace SunamoDebugIO._sunamo.SunamoValues;
 internal class AppStringsFolders
 {
     #region Not backuped
