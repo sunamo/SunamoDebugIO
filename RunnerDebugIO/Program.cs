@@ -5,7 +5,7 @@ namespace RunnerDebugIO;
 
 internal class Program
 {
-    const string appName = "RunnerDebugIO";
+    const string AppName = "RunnerDebugIO";
 
     static void Main()
     {
@@ -14,7 +14,7 @@ internal class Program
 
     static async Task MainAsync()
     {
-        AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = appName });
+        AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = AppName });
         await ProgramShared.CreatePathToFiles(AppData.ci.GetFileString);
 
         ProgramShared.Output = "Ahoj";
