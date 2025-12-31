@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
-    <Version>25.12.31.2</Version>
+    <TargetFrameworks>net9.0;net9.0;net9.0</TargetFrameworks>
+    <Version>25.12.31.3</Version>
     <Description>Read input and write output to prenamed files in every app on sunamo's platform</Description>
     <Authors>www.sunamo.cz</Authors>
     <Copyright>www.sunamo.cz</Copyright>
@@ -10,7 +10,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <PackageReleaseNotes>feat: better naming for variables</PackageReleaseNotes>
+    <PackageReleaseNotes>feat: replacing variable names with self-descriptive ones</PackageReleaseNotes>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
