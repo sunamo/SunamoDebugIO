@@ -4,14 +4,14 @@ public partial class ProgramShared
 {
     public static string NotExistsFiles
     {
-        set => WriteAllText(notExistsFile, value);
-        //ThisApp.Success("Output was written to " + notExistsFile);
+        set => WriteAllText(NotExistsFile, value);
+        //ThisApp.Success("Output was written to " + NotExistsFile);
     }
 
     public static string Output
     {
-        set => WriteAllText(outputFile, value);
-        //ThisApp.Success("Output was written to " + outputFile);
+        set => WriteAllText(OutputFile, value);
+        //ThisApp.Success("Output was written to " + OutputFile);
     }
 
     public static List<StringBuilder> OutputStringBuilders
@@ -26,53 +26,53 @@ public partial class ProgramShared
                 stringBuilder.AppendLine();
             }
 
-            WriteAllText(outputFile, stringBuilder.ToString());
+            WriteAllText(OutputFile, stringBuilder.ToString());
         }
     }
 
     public static string OutputJson
     {
-        set => WriteAllText(outputJsonFile, value);
-        //ThisApp.Success("Output was written to " + outputJsonFile);
+        set => WriteAllText(OutputJsonFile, value);
+        //ThisApp.Success("Output was written to " + OutputJsonFile);
     }
 
     public static string OutputHtml
     {
-        set => WriteAllText(outputJsonFile, value);
-        //ThisApp.Success("Output was written to " + outputJsonFile);
+        set => WriteAllText(OutputHtmlFile, value);
+        //ThisApp.Success("Output was written to " + OutputHtmlFile);
     }
 
     public static List<string> OutputL
     {
-        set => WriteAllLines(outputFile, value);
-        //ThisApp.Success("Output was written to " + outputFile);
+        set => WriteAllLines(OutputFile, value);
+        //ThisApp.Success("Output was written to " + OutputFile);
     }
 
 
     public static string Output2
     {
-        set => WriteAllText(output2File, value);
-        //ThisApp.Success("Output was written to " + output2File);
+        set => WriteAllText(Output2File, value);
+        //ThisApp.Success("Output was written to " + Output2File);
     }
 
     public static List<string> OutputL2
     {
-        set => WriteAllLines(output2File, value);
-        //ThisApp.Success("Output was written to " + output2File);
+        set => WriteAllLines(Output2File, value);
+        //ThisApp.Success("Output was written to " + Output2File);
     }
 
-    private static void WriteAllText(string output2File, string value)
+    private static void WriteAllText(string filePath, string value)
     {
-        if (output2File == null) throw new Exception("Firstly you have to call ProgramShared.CreatePathToFiles");
+        if (filePath == null) throw new Exception("Firstly you have to call ProgramShared.CreatePathToFiles");
 
-        File.WriteAllText(output2File, value);
+        File.WriteAllText(filePath, value);
     }
 
-    private static void WriteAllLines(string output2File, List<string> value)
+    private static void WriteAllLines(string filePath, List<string> value)
     {
-        if (output2File == null) throw new Exception("Firstly you have to call ProgramShared.CreatePathToFiles");
+        if (filePath == null) throw new Exception("Firstly you have to call ProgramShared.CreatePathToFiles");
 
-        File.WriteAllLines(output2File, value);
+        File.WriteAllLines(filePath, value);
     }
 
 
@@ -80,37 +80,37 @@ public partial class ProgramShared
     {
         WarningIfIsNull();
 
-        PH.Codium(output2File);
+        PH.Codium(Output2File);
     }
 
     public static void OutputOpen()
     {
         WarningIfIsNull();
 
-        PH.Codium(outputFile);
+        PH.Codium(OutputFile);
     }
 
     public static void OutputJsonOpen()
     {
         WarningIfIsNull();
 
-        PH.Codium(outputJsonFile);
+        PH.Codium(OutputJsonFile);
     }
 
     public static void OutputHtmlOpen()
     {
         WarningIfIsNull();
 
-        PH.Codium(outputHtmlFile);
+        PH.Codium(OutputHtmlFile);
     }
 
-    public static void InputOpen(bool waitForConfirmationOfDataEntered = true)
+    public static void InputOpen(bool isWaitingForConfirmationOfDataEntered = true)
     {
         WarningIfIsNull();
 
-        PH.Codium(inputFile);
+        PH.Codium(InputFile);
 
-        if (waitForConfirmationOfDataEntered)
+        if (isWaitingForConfirmationOfDataEntered)
         {
             Console.WriteLine("Input file was opened, press enter after fill it");
             Console.ReadLine();

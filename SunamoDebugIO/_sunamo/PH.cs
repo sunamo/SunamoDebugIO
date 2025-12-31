@@ -14,13 +14,13 @@ internal class PH
             myProcess.Start();
         }
     }
-    internal static void Codium(string defFile)
+    internal static void Codium(string filePath)
     {
         Thread.Sleep(100);
-        if (string.IsNullOrWhiteSpace(defFile))
+        if (string.IsNullOrWhiteSpace(filePath))
         {
-            ThrowEx.InvalidParameter(defFile, "defFile");
+            ThrowEx.InvalidParameter(filePath, "filePath");
         }
-        PH.Open(CodiumExe, defFile);
+        PH.Open(CodiumExe, filePath);
     }
 }

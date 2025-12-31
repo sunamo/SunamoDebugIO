@@ -1,28 +1,26 @@
 namespace SunamoDebugIO._sunamo.SunamoExceptions;
 
-// EN: Variable names have been checked and replaced with self-descriptive names
-// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
 internal partial class ThrowEx
 {
 
-    internal static bool InvalidParameter(string valueVar, string nameVar)
-    { return ThrowIsNotNull(Exceptions.InvalidParameter(FullNameOfExecutedCode(), valueVar, nameVar)); }
+    internal static bool InvalidParameter(string value, string parameterName)
+    { return ThrowIsNotNull(Exceptions.InvalidParameter(FullNameOfExecutedCode(), value, parameterName)); }
 
 
     #region Other
     internal static string FullNameOfExecutedCode()
     {
-        Tuple<string, string, string> placeOfExc = Exceptions.PlaceOfException();
-        string f = FullNameOfExecutedCode(placeOfExc.Item1, placeOfExc.Item2, true);
-        return f;
+        Tuple<string, string, string> placeOfException = Exceptions.PlaceOfException();
+        string fullName = FullNameOfExecutedCode(placeOfException.Item1, placeOfException.Item2, true);
+        return fullName;
     }
 
-    static string FullNameOfExecutedCode(object type, string methodName, bool fromThrowEx = false)
+    static string FullNameOfExecutedCode(object type, string methodName, bool isFromThrowEx = false)
     {
         if (methodName == null)
         {
             int depth = 2;
-            if (fromThrowEx)
+            if (isFromThrowEx)
             {
                 depth++;
             }
@@ -34,9 +32,9 @@ internal partial class ThrowEx
         {
 
         }
-        else if (type is Type type2)
+        else if (type is Type typeInstance)
         {
-            typeFullName = type2.FullName ?? "Type cannot be get via type is Type type2";
+            typeFullName = typeInstance.FullName ?? "Type cannot be get via type is Type typeInstance";
         }
         else if (type is MethodBase method)
         {
@@ -49,18 +47,18 @@ internal partial class ThrowEx
         }
         else
         {
-            Type t = type.GetType();
-            typeFullName = t.FullName ?? "Type cannot be get via type.GetType()";
+            Type actualType = type.GetType();
+            typeFullName = actualType.FullName ?? "Type cannot be get via type.GetType()";
         }
         return string.Concat(typeFullName, ".", methodName);
     }
 
-    internal static bool ThrowIsNotNull(string? exception, bool reallyThrow = true)
+    internal static bool ThrowIsNotNull(string? exception, bool isReallyThrow = true)
     {
         if (exception != null)
         {
             Debugger.Break();
-            if (reallyThrow)
+            if (isReallyThrow)
             {
                 throw new Exception(exception);
             }

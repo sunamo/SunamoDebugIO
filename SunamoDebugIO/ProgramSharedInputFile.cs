@@ -4,7 +4,7 @@ public partial class ProgramShared
 {
     public static async Task<string> InputHtml()
     {
-        return await File.ReadAllTextAsync(inputHtmlFile);
+        return await File.ReadAllTextAsync(InputHtmlFile);
     }
 
     public static
@@ -19,7 +19,7 @@ public partial class ProgramShared
 #if ASYNC
             await
 #endif
-                File.ReadAllTextAsync(inputFile);
+                File.ReadAllTextAsync(InputFile);
     }
 
     public static
@@ -30,7 +30,7 @@ public partial class ProgramShared
 #endif
         InputL()
     {
-        return (await File.ReadAllLinesAsync(inputFile)).ToList();
+        return (await File.ReadAllLinesAsync(InputFile)).ToList();
     }
 
     public static
@@ -41,6 +41,6 @@ public partial class ProgramShared
 #endif
         InputJson()
     {
-        return await File.ReadAllTextAsync(inputFileJson);
+        return await File.ReadAllTextAsync(InputFileJson);
     }
 }

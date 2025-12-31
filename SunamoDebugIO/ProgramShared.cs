@@ -10,26 +10,26 @@ public partial class ProgramShared
     /// <param name="getFile"></param>
     public static async Task CreatePathToFiles(Func<string, string, string> getFile)
     {
-        outputFile = getFile(AppStringsFolders.Output, "output.txt");
-        outputJsonFile = getFile(AppStringsFolders.Output, "output.json");
-        outputHtmlFile = getFile(AppStringsFolders.Output, "output.html");
-        output2File = getFile(AppStringsFolders.Output, "output2.txt");
-        notExistsFile = getFile(AppStringsFolders.Output, "notExistsFile.txt");
-        inputFile = getFile(AppStringsFolders.Input, "input.txt");
-        inputFileJson = getFile(AppStringsFolders.Input, "input.json");
-        input2File = getFile(AppStringsFolders.Input, "input2.txt");
-        input3File = getFile(AppStringsFolders.Input, "input3.txt");
-        inputHtmlFile = getFile(AppStringsFolders.Input, "inputHtml.html");
+        OutputFile = getFile(AppStringsFolders.Output, "output.txt");
+        OutputJsonFile = getFile(AppStringsFolders.Output, "output.json");
+        OutputHtmlFile = getFile(AppStringsFolders.Output, "output.html");
+        Output2File = getFile(AppStringsFolders.Output, "output2.txt");
+        NotExistsFile = getFile(AppStringsFolders.Output, "notExistsFile.txt");
+        InputFile = getFile(AppStringsFolders.Input, "input.txt");
+        InputFileJson = getFile(AppStringsFolders.Input, "input.json");
+        Input2File = getFile(AppStringsFolders.Input, "input2.txt");
+        Input3File = getFile(AppStringsFolders.Input, "input3.txt");
+        InputHtmlFile = getFile(AppStringsFolders.Input, "inputHtml.html");
 
-        await CreateFileIfDoesntExists(outputFile);
-        await CreateFileIfDoesntExists(outputJsonFile);
-        await CreateFileIfDoesntExists(outputHtmlFile);
-        await CreateFileIfDoesntExists(output2File);
-        await CreateFileIfDoesntExists(notExistsFile);
-        await CreateFileIfDoesntExists(inputFile);
-        await CreateFileIfDoesntExists(input2File);
-        await CreateFileIfDoesntExists(input3File);
-        await CreateFileIfDoesntExists(inputHtmlFile);
+        await CreateFileIfDoesntExists(OutputFile);
+        await CreateFileIfDoesntExists(OutputJsonFile);
+        await CreateFileIfDoesntExists(OutputHtmlFile);
+        await CreateFileIfDoesntExists(Output2File);
+        await CreateFileIfDoesntExists(NotExistsFile);
+        await CreateFileIfDoesntExists(InputFile);
+        await CreateFileIfDoesntExists(Input2File);
+        await CreateFileIfDoesntExists(Input3File);
+        await CreateFileIfDoesntExists(InputHtmlFile);
     }
 
     private static async Task CreateFileIfDoesntExists(string path)
@@ -45,17 +45,17 @@ public partial class ProgramShared
     #region Toto musím implementovat do každé třídy - protože jsou static, tím že je zdědím ničeho nedosáhnu. Tím pádem je ani dědit nemusím a musím je impl. jako předávající vlastnosti.
 
 
-    public static Type type = typeof(ProgramShared);
-    public static string outputFile = "";
-    public static string outputJsonFile = "";
-    public static string outputHtmlFile = "";
-    public static string output2File = "";
-    public static string notExistsFile = "";
-    public static string inputFile = "";
-    public static string inputFileJson = "";
-    public static string input2File = "";
-    public static string input3File = "";
-    public static string inputHtmlFile = "";
+    public static Type Type { get; set; } = typeof(ProgramShared);
+    public static string OutputFile { get; set; } = "";
+    public static string OutputJsonFile { get; set; } = "";
+    public static string OutputHtmlFile { get; set; } = "";
+    public static string Output2File { get; set; } = "";
+    public static string NotExistsFile { get; set; } = "";
+    public static string InputFile { get; set; } = "";
+    public static string InputFileJson { get; set; } = "";
+    public static string Input2File { get; set; } = "";
+    public static string Input3File { get; set; } = "";
+    public static string InputHtmlFile { get; set; } = "";
 
     #endregion
 }

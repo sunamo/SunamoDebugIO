@@ -14,7 +14,7 @@ public partial class ProgramShared
 
     public static List<int> ClipboardIInt
     {
-        set => Clipboard = string.Join(Environment.NewLine, value.ConvertAll(d => d.ToString()));
+        set => Clipboard = string.Join(Environment.NewLine, value.ConvertAll(number => number.ToString()));
     }
 
     #endregion
@@ -60,7 +60,7 @@ public partial class ProgramShared
     /// </summary>
     public static List<int> ClipboardLInt
     {
-        set { Clipboard = string.Join(Environment.NewLine, value.ConvertAll(d => d.ToString())); }
+        set { Clipboard = string.Join(Environment.NewLine, value.ConvertAll(number => number.ToString())); }
     }
 
     /// <summary>

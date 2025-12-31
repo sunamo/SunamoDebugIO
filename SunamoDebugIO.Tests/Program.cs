@@ -1,3 +1,4 @@
+// variables names: ok
 namespace SunamoDebugIO.Tests;
 
 internal class Program : ProgramShared
