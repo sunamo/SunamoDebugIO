@@ -1,3 +1,4 @@
+// variables names: ok
 namespace SunamoDebugIO._sunamo.SunamoExceptions;
 
 /// <summary>

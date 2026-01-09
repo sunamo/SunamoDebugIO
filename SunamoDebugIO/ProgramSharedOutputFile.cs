@@ -1,3 +1,4 @@
+// variables names: ok
 namespace SunamoDebugIO;
 
 /// <summary>
@@ -165,14 +166,14 @@ public partial class ProgramShared
     /// EN: Opens the input file in VSCodium editor, optionally waits for user confirmation after filling
     /// CZ: Otevře vstupní soubor v editoru VSCodium, volitelně čeká na potvrzení uživatele po vyplnění
     /// </summary>
-    /// <param name="isWaitingForConfirmationOfDataEntered">Whether to wait for user to press enter after filling the file</param>
-    public static void InputOpen(bool isWaitingForConfirmationOfDataEntered = true)
+    /// <param name="isWaitForInput">Whether to wait for user to press enter after filling the file</param>
+    public static void InputOpen(bool isWaitForInput = true)
     {
         WarningIfIsNull();
 
         PH.Codium(InputFile);
 
-        if (isWaitingForConfirmationOfDataEntered)
+        if (isWaitForInput)
         {
             Console.WriteLine("Input file was opened, press enter after fill it");
             Console.ReadLine();

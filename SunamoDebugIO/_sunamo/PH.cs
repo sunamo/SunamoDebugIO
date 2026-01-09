@@ -1,3 +1,4 @@
+// variables names: ok
 namespace SunamoDebugIO._sunamo;
 
 /// <summary>
@@ -20,13 +21,13 @@ internal class PH
     /// <param name="args">Command line arguments to pass to the application</param>
     private static void Open(string app, string args)
     {
-        using (Process myProcess = new Process())
+        using (Process process = new Process())
         {
-            myProcess.StartInfo.UseShellExecute = true;
-            myProcess.StartInfo.FileName = app;
-            myProcess.StartInfo.Arguments = args;
-            myProcess.StartInfo.CreateNoWindow = true;
-            myProcess.Start();
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.FileName = app;
+            process.StartInfo.Arguments = args;
+            process.StartInfo.CreateNoWindow = true;
+            process.Start();
         }
     }
 

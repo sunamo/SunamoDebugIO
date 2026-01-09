@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SunamoPlatformUwpInterop" Version="24.12.6.1" />
+    <PackageReference Include="SunamoPlatformUwpInterop" Version="*" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
     <ProjectReference Include="..\SunamoDebugIO.Tests\SunamoDebugIO.Tests.csproj" />
   </ItemGroup>

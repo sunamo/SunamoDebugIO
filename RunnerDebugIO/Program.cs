@@ -1,3 +1,4 @@
+// variables names: ok
 using SunamoDebugIO;
 using SunamoPlatformUwpInterop.AppData;
 
