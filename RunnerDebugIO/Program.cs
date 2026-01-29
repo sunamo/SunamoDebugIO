@@ -18,6 +18,7 @@ internal class Program
         AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = AppName });
         await ProgramShared.CreatePathToFiles(AppData.ci.GetFileString);
 
+
         ProgramShared.Output = "Ahoj";
         ProgramShared.Output2 = "R";
         ProgramShared.OutputL = ["L"];
