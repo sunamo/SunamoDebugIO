@@ -1,9 +1,23 @@
 namespace SunamoDebugIO._sunamo;
 
+/// <summary>
+/// EN: Process helper class for opening files in external applications
+/// CZ: Pomocná třída pro otevírání souborů v externích aplikacích
+/// </summary>
 internal class PH
 {
+    /// <summary>
+    /// EN: VSCodium executable name
+    /// CZ: Název spustitelného souboru VSCodium
+    /// </summary>
     const string CodiumExe = "VSCodium.exe";
 
+    /// <summary>
+    /// EN: Opens an application with specified arguments
+    /// CZ: Otevře aplikaci se specifikovanými argumenty
+    /// </summary>
+    /// <param name="app">Application executable name or path</param>
+    /// <param name="args">Command line arguments to pass to the application</param>
     private static void Open(string app, string args)
     {
         using var process = new Process();
@@ -14,6 +28,11 @@ internal class PH
         process.Start();
     }
 
+    /// <summary>
+    /// EN: Opens a file in VSCodium editor after a short delay
+    /// CZ: Otevře soubor v editoru VSCodium po krátké prodlevě
+    /// </summary>
+    /// <param name="filePath">Path to the file to open</param>
     private static readonly string[] CodiumCandidatePaths =
     [
         @"C:\Program Files\VSCodium\VSCodium.exe",
