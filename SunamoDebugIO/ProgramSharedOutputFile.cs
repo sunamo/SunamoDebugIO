@@ -32,7 +32,7 @@ public partial class ProgramShared
     {
         set
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            var stringBuilder = new StringBuilder();
             foreach (var item in value)
             {
                 stringBuilder.AppendLine(item.ToString());

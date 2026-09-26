@@ -15,8 +15,8 @@ internal class Program
 
     static async Task MainAsync()
     {
-        AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = AppName });
-        await ProgramShared.CreatePathToFiles(AppData.ci.GetFileString);
+        AppData.Instance.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = AppName });
+        await ProgramShared.CreatePathToFiles(AppData.Instance.GetFileString);
 
 
         ProgramShared.Output = "Ahoj";

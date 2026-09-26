@@ -42,7 +42,7 @@ public partial class ProgramShared
     /// <param name="path">Path to the file</param>
     private static async Task CreateFileIfDoesntExists(string path)
     {
-        await File.AppendAllTextAsync(path, string.Empty);
+        await FileAsync.AppendAllTextAsync(path, string.Empty);
     }
 
     #region Properties - I have to implement this in every class because they are static, inheriting them achieves nothing
