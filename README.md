@@ -1,5 +1,10 @@
 # SunamoDebugIO
 
+## Short description
+
+Čtení vstupu a zápis výstupu do předem pojmenovaných souborů ve všech aplikacích platformy Sunamo, pro účely ladění.
+
+
 Read input and write output to prenamed files in every app on sunamo's platform
 
 ## Overview
