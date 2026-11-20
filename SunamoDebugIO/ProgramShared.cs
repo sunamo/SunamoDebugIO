@@ -2,6 +2,10 @@ namespace SunamoDebugIO;
 
 public partial class ProgramShared
 {
+    /// <summary>
+    /// Create path to files.
+    /// </summary>
+    /// <param name="getFile">The get file.</param>
     public static async Task CreatePathToFiles(Func<string, string, string> getFile)
     {
         OutputFile = getFile(AppStringsFolders.Output, "output.txt");
@@ -33,26 +37,59 @@ public partial class ProgramShared
 
     #region Properties - I have to implement this in every class because they are static, inheriting them achieves nothing
 
+    /// <summary>
+    /// Gets or sets the type.
+    /// </summary>
     public static Type Type { get; set; } = typeof(ProgramShared);
 
+    /// <summary>
+    /// Gets or sets the output file.
+    /// </summary>
     public static string OutputFile { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the output json file.
+    /// </summary>
     public static string OutputJsonFile { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the output html file.
+    /// </summary>
     public static string OutputHtmlFile { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the output 2 file.
+    /// </summary>
     public static string Output2File { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the not exists file.
+    /// </summary>
     public static string NotExistsFile { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the input file.
+    /// </summary>
     public static string InputFile { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the input file json.
+    /// </summary>
     public static string InputFileJson { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the input 2 file.
+    /// </summary>
     public static string Input2File { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the input 3 file.
+    /// </summary>
     public static string Input3File { get; set; } = "";
 
+    /// <summary>
+    /// Gets or sets the input html file.
+    /// </summary>
     public static string InputHtmlFile { get; set; } = "";
 
     #endregion
