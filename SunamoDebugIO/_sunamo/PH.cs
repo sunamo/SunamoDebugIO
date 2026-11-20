@@ -15,8 +15,7 @@ internal class PH
     }
 
     /// <summary>
-    /// EN: Opens a file in VSCodium editor after a short delay
-    /// CZ: Otevře soubor v editoru VSCodium po krátké prodlevě
+    /// Opens a file in VSCodium editor after a short delay
     /// </summary>
     /// <param name="filePath">Path to the file to open</param>
     private static readonly string[] CodiumCandidatePaths =

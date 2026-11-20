@@ -1,14 +1,12 @@
 namespace SunamoDebugIO;
 
 /// <summary>
-/// EN: Input file-related functionality for ProgramShared
-/// CZ: Funkcionalita související se vstupními soubory pro ProgramShared
+/// Input file-related functionality for ProgramShared
 /// </summary>
 public partial class ProgramShared
 {
     /// <summary>
-    /// EN: Reads the content of HTML input file
-    /// CZ: Přečte obsah HTML vstupního souboru
+    /// Reads the content of HTML input file
     /// </summary>
     /// <returns>HTML file content as string</returns>
     public static async Task<string> InputHtml()
@@ -17,8 +15,7 @@ public partial class ProgramShared
     }
 
     /// <summary>
-    /// EN: Reads the content of main input file
-    /// CZ: Přečte obsah hlavního vstupního souboru
+    /// Reads the content of main input file
     /// </summary>
     /// <returns>Input file content as string</returns>
     public static
@@ -31,8 +28,7 @@ public partial class ProgramShared
     }
 
     /// <summary>
-    /// EN: Reads the content of main input file as a list of lines
-    /// CZ: Přečte obsah hlavního vstupního souboru jako seznam řádků
+    /// Reads the content of main input file as a list of lines
     /// </summary>
     /// <returns>Input file content as list of strings</returns>
     public static
@@ -43,8 +39,7 @@ public partial class ProgramShared
     }
 
     /// <summary>
-    /// EN: Reads the content of JSON input file
-    /// CZ: Přečte obsah JSON vstupního souboru
+    /// Reads the content of JSON input file
     /// </summary>
     /// <returns>JSON file content as string</returns>
     public static
