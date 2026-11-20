@@ -10,10 +10,5 @@ internal class Program : ProgramShared
 
     static async Task MainAsync()
     {
-        //SunamoXlf.TranslateDictionary.returnXlfKey = true;
-        //ThisApp.Name = "ToNugets";
-        //AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { });
-        //await CreatePathToFiles(AppData.ci.GetFileString);
-        //Output = "ab";
     }
 }
